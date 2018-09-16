@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Form</title>
+        
+        <style>
+            
+            fieldset
+            {
+                border-style: solid;
+                border-color: black;
+            }
+            
+            form div + div 
+            {
+                margin-top: 0.5em;
+            }
+            
+            label 
+            {
+                /* To make sure that all labels have the same size and are properly aligned */
+                display: inline-block;
+                width: 80px;
+                text-align: right;
+                text-decoration-style: solid;
+            }
+            
+            input, textarea
+            {
+                font: 14px Monospace;
+                width: 200px;
+                height: 20px;
+                box-sizing: border-box;
+                border: 1px solid #999;
+            }
+            
+            input:focus, textarea:focus 
+            {
+                /* To give a little highlight on active elements */
+                border-color: #000;
+            }
+            
+            textarea 
+            {
+                /* To properly align multiline text fields with their labels */
+                vertical-align: top;
+                /* To give enough room to type some text */
+                height: 9em;
+            }
+            
+            .width-set 
+            {
+                /* fieldset spans only around the content width and not the width of the container*/
+                display: inline-block;
+            }
+             
+            .font-set
+            {
+                font-family: serif;
+                font-size: 20px;
+                font-weight: solid;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        <form>
+            
+            <fieldset class="width-set">
+                
+                <legend class="font-set"><strong>Form</strong></legend>
+                
+                <div>
+                    <label for="first_name">First Name : </label>
+                    <input type="text" id="first_name" name="user_first_name"><br>
+                </div>
+                
+                <div>
+                    <label for="last_name">Last Name : </label>
+                    <input type="text" id="last_name" name="user_last_name"><br>
+                </div>
+                
+                <div>
+                    <label for="age">Age : </label>
+                    <input type="text" id="age" name="user_age"><br>
+                </div>
+
+                <div>
+                    <label for="msg">Message : </label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </div>
+                
+                <div>
+                    <center>
+                        <button type="submit" name="Enter"><strong>Submit</strong></button>
+                    </center>   
+                </div>
+                
+            </fieldset>
+
+        </form>
+    </body>
+</html>
